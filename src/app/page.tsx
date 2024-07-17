@@ -1,95 +1,91 @@
-import Image from "next/image";
+"use client";
+
+import AudioPlayer from "@/components/AudioPlayer/AudioPlayer";
 import styles from "./page.module.css";
+import AudioButton from "@/components/AudioButton/AudioButton";
+import { useState } from "react";
 
-export default function Home() {
-  return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+const HomePage = () => {
+  const [currentAudio, setCurrentAudio] = useState<HTMLAudioElement | null>(
+    null
   );
-}
+
+  const handlePlay = (audio: HTMLAudioElement) => {
+    if (currentAudio && currentAudio !== audio) {
+      currentAudio.pause();
+      currentAudio.currentTime = 0;
+    }
+    setCurrentAudio(audio);
+    audio.play();
+  };
+
+  return (
+    <>
+      <main className={styles.main}>
+        <h1 className={styles.mainTitle}>Classroom Effects</h1>
+
+        <AudioPlayer box_title={"Silvio Santos"}>
+          <AudioButton
+            audio="/Silvio_Santos/Certa_Resposta"
+            title="Certa Resposta!"
+            onPlay={handlePlay}
+          />
+          <AudioButton
+            audio="/Silvio_Santos/10_segundos"
+            title="10s"
+            onPlay={handlePlay}
+          />
+          <AudioButton
+            audio="/Silvio_Santos/AIAIAI_UIUI"
+            title="AiAiAi"
+            onPlay={handlePlay}
+          />
+          <AudioButton
+            audio="/Silvio_Santos/Show_do_Milhao_Tema"
+            title="Show Do Milhão"
+            onPlay={handlePlay}
+          />
+        </AudioPlayer>
+
+        <AudioPlayer box_title={"Batidas"}>
+          <AudioButton
+            audio="toda_hora"
+            title="Toda Hora"
+            onPlay={handlePlay}
+          />
+        </AudioPlayer>
+
+        <AudioPlayer box_title={"Globo"}>
+          <AudioButton
+            audio="/Globo/Globo_Rural"
+            title="Globo Rural"
+            onPlay={handlePlay}
+          />
+          <AudioButton
+            audio="/Globo/Jornal_Nacional_Encerramento"
+            title="Jornal Nacional"
+            onPlay={handlePlay}
+          />
+          <AudioButton
+            audio="/Globo/Formula_1_Tema"
+            title="Fórmula 1"
+            onPlay={handlePlay}
+          />
+        </AudioPlayer>
+      </main>
+      <footer>
+        <a href="#"> Sobre </a>
+        <p>©copyright 2024 - Daniel Mendes</p>
+        <p>
+          Made by{" "}
+          <a href="https://github.com/DanielMendesSensei" target="_blank">
+            Daniel Mendes
+          </a>{" "}
+          - PdA
+        </p>
+      </footer>
+    </>
+  );
+};
+
+export default HomePage;

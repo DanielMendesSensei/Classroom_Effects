@@ -1,6 +1,18 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1 align="center"> Clasroom Effects - PdA</h1>
 
-## Getting Started
+## 👀Visão Geral
+
+Tá querendo turbinar suas aulas na PdA usando sonoplastia, mas não quer ficar toda hora abrindo link do youtube? Bom... tá aqui a ferramenta que você facilitador precisa! Com Classroom Effects você deixará suas aulas mais divertidas e dinâmicas com sons diversos. Basta tocar em um botão com o som que desejar
+
+## 📤Last Update
+
+Versão 0.0.1 -> build: Classroom Effect!
+
+## 📸 Screenshots:
+
+![Screenshot](public/imgs/Presentation.png)
+
+## ⚙️ Getting Started
 
 First, run the development server:
 
@@ -16,21 +28,35 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## ⏩ Próximos Passos
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- Mixer central para controle de volume e estado(pause/play);
+- Deploy;
 
-## Learn More
+## 💪🏾 Contribuição
 
-To learn more about Next.js, take a look at the following resources:
+Se você aluno, facilitador, ou qualquer outra frente dentro da PdA e deseja contribuir para este projeto, siga estas etapas:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Faça um fork do repositório.
+2. Crie uma nova branch: `git checkout -b minha-contribuição`
+3. Faça suas alterações e envie um pull request.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Por favor, siga as [diretrizes de contribuição](.github/CONTRIBUTING) para garantir um processo suave.
 
-## Deploy on Vercel
+## 📟 Contato
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Para suporte, abra uma issue.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## 🚀 Tecnologias
+
+Esse projeto foi desenvolvido com as seguintes tecnologias:
+
+- React & Next.js
+- Typescript
+- Git e Github
+
+## 📜 Licença
+
+- Esse projeto está sob a licença [MIT](/LICENSE).
+
+<h3 align="right"> Esse repo é atualizado semanalmente 🌱... </h3>

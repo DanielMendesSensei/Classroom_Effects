@@ -11,4 +11,9 @@
   color: var(--bkcolor1);
   transition: all 0.2s;
   box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: var(--bkcolor2);
 }

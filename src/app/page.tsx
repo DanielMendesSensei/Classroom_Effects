@@ -45,6 +45,11 @@ const HomePage = () => {
             title="Show Do Milhão"
             onPlay={handlePlay}
           />
+          <AudioButton
+            audio="/Silvio_Santos/Roda_Roda_Tema"
+            title="Roda Roda"
+            onPlay={handlePlay}
+          />
         </AudioPlayer>
 
         <AudioPlayer box_title={"Batidas"}>
@@ -69,6 +74,129 @@ const HomePage = () => {
           <AudioButton
             audio="/Globo/Formula_1_Tema"
             title="Fórmula 1"
+            onPlay={handlePlay}
+          />
+          <AudioButton
+            audio="/Globo/Esporte_Espetacular"
+            title="Esporte Espetacular"
+            onPlay={handlePlay}
+          />
+          <AudioButton
+            audio="/Globo/Sessao_Da_Tarde"
+            title="Sessão Da Tarde"
+            onPlay={handlePlay}
+          />
+          <AudioButton
+            audio="/Globo/Plantao_globo"
+            title="Plantão Globo"
+            onPlay={handlePlay}
+          />
+        </AudioPlayer>
+
+        <AudioPlayer box_title={"Efeitos Diversos"}>
+          <AudioButton
+            audio="/Efeitos_Diversos/Aplausos"
+            title="Aplausos"
+            onPlay={handlePlay}
+          />
+          <AudioButton
+            audio="/Efeitos_Diversos/Rebobinando"
+            title="Rebobinando"
+            onPlay={handlePlay}
+          />
+          <AudioButton
+            audio="/Efeitos_Diversos/Xiiiii"
+            title="Xiiiii"
+            onPlay={handlePlay}
+          />
+          <AudioButton
+            audio="/Efeitos_Diversos/Uepa"
+            title="Uêpa!"
+            onPlay={handlePlay}
+          />
+          <AudioButton
+            audio="/Efeitos_Diversos/Iiiiirra"
+            title="Iiiiirra!"
+            onPlay={handlePlay}
+          />
+          <AudioButton
+            audio="/Efeitos_Diversos/Rapaaaaz"
+            title="Rapaaaaz"
+            onPlay={handlePlay}
+          />
+          <AudioButton
+            audio="/Efeitos_Diversos/Pare"
+            title="PARE!"
+            onPlay={handlePlay}
+          />
+          <AudioButton
+            audio="/Efeitos_Diversos/Ele_Gosta"
+            title="Ele Gosta"
+            onPlay={handlePlay}
+          />
+          <AudioButton
+            audio="/Efeitos_Diversos/CAVALO"
+            title="CAVALO"
+            onPlay={handlePlay}
+          />
+          <AudioButton
+            audio="/Efeitos_Diversos/Bob_Esponja_Fail"
+            title="Fail"
+            onPlay={handlePlay}
+          />
+          <AudioButton
+            audio="/Efeitos_Diversos/BRUH"
+            title="BRUH"
+            onPlay={handlePlay}
+          />
+          <AudioButton
+            audio="/Efeitos_Diversos/Goku_Drip"
+            title="Goku Drip"
+            onPlay={handlePlay}
+          />
+          <AudioButton
+            audio="/Efeitos_Diversos/Miranha"
+            title="Miranha"
+            onPlay={handlePlay}
+          />
+          <AudioButton
+            audio="/Efeitos_Diversos/oh-my-god"
+            title="Ooooh my good"
+            onPlay={handlePlay}
+          />
+          <AudioButton
+            audio="/Efeitos_Diversos/sus"
+            title="Sus"
+            onPlay={handlePlay}
+          />
+          <AudioButton
+            audio="/Efeitos_Diversos/creditos"
+            title="Creditos Meme"
+            onPlay={handlePlay}
+          />
+          <AudioButton
+            audio="/Efeitos_Diversos/boom_thud"
+            title="Boom Seco"
+            onPlay={handlePlay}
+          />
+          <AudioButton
+            audio="/Efeitos_Diversos/Wooow"
+            title="Wooow Anime"
+            onPlay={handlePlay}
+          />
+          <AudioButton
+            audio="/Efeitos_Diversos/wide_putin"
+            title="Wide Putin"
+            onPlay={handlePlay}
+          />
+          <AudioButton
+            audio="/Efeitos_Diversos/boom_rizz"
+            title="Boom Rizz"
+            onPlay={handlePlay}
+          />
+          <AudioButton
+            audio="/Efeitos_Diversos/gta_sa"
+            title="Mission Passed"
             onPlay={handlePlay}
           />
         </AudioPlayer>

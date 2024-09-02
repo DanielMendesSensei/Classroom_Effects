@@ -1,14 +1,16 @@
 "use client";
 
 import AudioPlayer from "@/components/AudioPlayer/AudioPlayer";
-import styles from "./page.module.css";
 import AudioButton from "@/components/AudioButton/AudioButton";
+import AudioControls from "@/components/AudioControls/AudioControls";
+import styles from "./page.module.css";
 import { useState } from "react";
 
 const HomePage = () => {
   const [currentAudio, setCurrentAudio] = useState<HTMLAudioElement | null>(
     null
   );
+  const [isPlaying, setIsPlaying] = useState(false);
 
   const handlePlay = (audio: HTMLAudioElement) => {
     if (currentAudio && currentAudio !== audio) {
@@ -17,13 +19,44 @@ const HomePage = () => {
     }
     setCurrentAudio(audio);
     audio.play();
+    setIsPlaying(true);
+  };
+
+  const handlePause = () => {
+    if (currentAudio) {
+      currentAudio.pause();
+      setIsPlaying(false);
+    }
+  };
+
+  const handleStop = () => {
+    if (currentAudio) {
+      currentAudio.pause();
+      currentAudio.currentTime = 0;
+      setIsPlaying(false);
+    }
+  };
+
+  const handleVolumeChange = (volume: number) => {
+    if (currentAudio) {
+      currentAudio.volume = volume;
+    }
   };
 
   return (
     <>
       <main className={styles.main}>
         <h1 className={styles.mainTitle}>Classroom Effects</h1>
+        {/* Controles de Áudio Universais */}
+        <AudioControls
+          isPlaying={isPlaying}
+          onPlay={() => currentAudio?.play()}
+          onPause={handlePause}
+          onStop={handleStop}
+          onVolumeChange={handleVolumeChange}
+        />
 
+        {/* Seções de Botões de Áudio */}
         <AudioPlayer box_title={"Silvio Santos"}>
           <AudioButton
             audio="/Silvio_Santos/Certa_Resposta"

@@ -12,7 +12,7 @@ interface AudioButtonProps {
 const AudioButton = ({ title, audio, onPlay }: AudioButtonProps) => {
   const audioRef = useRef<HTMLAudioElement>(null);
 
-  const playAudio = () => {
+  const handleClick = () => {
     if (audioRef.current) {
       onPlay(audioRef.current);
     }
@@ -20,7 +20,7 @@ const AudioButton = ({ title, audio, onPlay }: AudioButtonProps) => {
 
   return (
     <div>
-      <button onClick={playAudio} className={AudioButtonStyle.button}>
+      <button onClick={handleClick} className={AudioButtonStyle.button}>
         {title}
       </button>
       <audio

@@ -6,7 +6,7 @@ Tá querendo turbinar suas aulas na PdA usando sonoplastia, mas não quer ficar 
 
 ## 📤Last Update
 
-Versão 0.0.2 -> build: Brand New Effects!
+Versão 0.1.0 -> build: Brand New Effects!
 
 ## 📸 Screenshots:
 

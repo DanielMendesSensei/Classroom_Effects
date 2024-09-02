@@ -1,0 +1,31 @@
+.AudioControls {
+  display: flex;
+  background-color: var(--bkcolor5);
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  padding: 1.2rem;
+  gap: 1rem;
+  z-index: 1000;
+  position: fixed;
+  border-radius: 20px;
+  bottom: 10px;
+  right: 10px;
+}
+
+.AudioControls > button {
+  color: var(--bkcolor1);
+  background-color: var(--bkcolor5);
+}
+
+.AudioControls > input[type="range"] {
+  /*removes default webkit styles*/
+  -webkit-appearance: none;
+
+  /*fix for FF unable to apply focus style bug */
+  border: 1px solid white;
+  border: none;
+  border-radius: 10px;
+
+  background-color: var(--bkcolor1);
+}
